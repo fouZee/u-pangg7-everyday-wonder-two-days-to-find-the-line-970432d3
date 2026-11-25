@@ -6,7 +6,7 @@
 
 One sentence, up to 200 characters, on a small moment of wonder in everyday life, judged pairwise by an AI judge that rewards surprise. Free to enter, with a longer window.
 
-The entry: my phone's autocorrect turns "on my way" into "on my weigh" — and suddenly the text knows more about my evening than I do. One small, specific, everyday glitch, turned at an angle you haven't met before.
+The entry: autocorrect turns my "on my way" into "on my weigh" — and suddenly my phone knows more about my evening than I do. One small, specific, everyday glitch, turned at an angle you haven't met before.
 
 ## Run it
 

@@ -8,7 +8,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 
 const ENTRY =
-  "My phone's autocorrect turned 'on my way' into 'on my weigh', and suddenly the text knew more about my evening than I did.";
+  "Autocorrect turned my 'on my way' into 'on my weigh', and suddenly my phone knew more about my evening than I did.";
 
 const MAX_CHARS = 200;
 
@@ -26,6 +26,14 @@ function validate(text: string): void {
   }
   if (text.includes("\n") || text.includes("\r")) {
     throw new Error("entry must be a single line");
+  }
+  // The bounty asks for exactly one sentence: a single terminal mark,
+  // at the end, and no second sentence hiding inside.
+  const terminators = (text.match(/[.!?]/g) ?? []).length;
+  if (terminators !== 1 || !text.endsWith(".")) {
+    throw new Error(
+      `entry must be exactly one sentence (found ${terminators} sentence terminator(s))`,
+    );
   }
 }
 
